@@ -2,25 +2,29 @@
 #include <stdio.h>
 
 /**
-*_strcat - concatenates two strings
-* @dest: string to append to
-* @src: string to add
-* Return: a pointer to the resulting string
-*/
-
+ * _strcat - Lets concatenates two strings
+ * @dest: input argument
+ * @src: input argument
+ *
+ * Return: desk
+ */
 char *_strcat(char *dest, char *src)
 {
-int i, j;
-i = 0;
-j = 0;
-while (dest[i] != '\0')
-i++;
-while (src[j] != '\0')
+int conCat1;
+int conCat2;
+
+conCat1 = 0;
+while (dest[conCat1] != 0)
 {
-dest[i] = src[j];
-j++;
-i++;
+conCat1++;
 }
-dest[i] = '\0';
+conCat2 = 0;
+while (src[conCat2] != 0)
+{
+dest[conCat1] = src[conCat2];
+conCat1++;
+conCat2++;
+}
+dest[conCat1] = '\0';
 return (dest);
 }
